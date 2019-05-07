@@ -7,38 +7,37 @@
 // studente inserendo nell’ordine: nome, cognome e età.
 
 //creo oggetto che descrive studente
-var student = {
+var student1 = {
   "nome": "Donato",
   "cognome": "Ciao",
   "età": 29 + " anni"
 }
 
 //stampo le proprietà dello studente a schermo
-for (var prop in student) {
-  document.writeln(student[prop]);
+for (var prop in student1) {
+  document.writeln(student1[prop]);
 }
 
 //creo array di studenti
 var students = [
   {
-    "nome": "Mario",
-    "cognome": "Rossi",
-    "età": 28 + " anni"
+    "name": "Mario",
+    "surname": "Rossi",
+    "age": 28 + " anni"
   },
   {
-    "nome": "Marco",
-    "cognome": "Verdi",
-    "età": 26 + " anni"
+    "name": "Marco",
+    "surname": "Verdi",
+    "age": 26 + " anni"
   },
   {
-    "nome": "Luca",
-    "cognome": "Grandi",
-    "età": 27 + " anni"
+    "name": "Luca",
+    "surname": "Grandi",
+    "age": 27 + " anni"
   }
 ];
 
 //ciclo array di studenti su tutti gli studenti e stampo nome e cognome per ognuno
-
 for (var i = 0; i < students.length; i++) {
   document.writeln("</br>");
   for (var props in students[i]) {
@@ -46,4 +45,14 @@ for (var i = 0; i < students.length; i++) {
   }
 }
 
-//inserisco nuovo studente con prompt
+//inserisco nuovo studente con prompt e stampo il nuovo studente
+var student2 = {};
+
+student2.name = prompt("Inserisci il nome dello studente");
+student2.surname = prompt("Inserisci il cognome dello studente");
+student2.age = prompt("Inserisci l'età dello studente");
+
+document.writeln("</br>");
+for (var prop in student2) {
+  document.writeln(student2[prop]);
+}
